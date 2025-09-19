@@ -15,10 +15,11 @@
 ## 👨‍💻 Contributors
 
 - **Project Creator**: Xin Lu
-- **Core Developers**: Xin Lu, Min Li
+- **Core Developers**: Xin Lu, Yifei Guan, Min Li
 - **Special Thanks**: 
   - Jianpeng Liu, Zhongqing Guo and Yanran Shi: Provided benchmark references and helpful discussions on FQAH simulations. In particular, Xin Lu works as Research Assistant Professor in Prof. Jianpeng Liu’s group at ShanghaiTech University at the moment of the project kickoff.
-  - Guillaume Roux: Initiated Xin Lu on the technique of Exact Diagonalization. Xin Lu received, as Master 2 student, his lectures at ICFP in France during the [Numerical Physics course](http://www.lptms.universite-paris-saclay.fr/wiki-cours/index.php/ICFP_NumPhys_Paris). 
+  - Guillaume Roux: Initiated Xin Lu on the technique of Exact Diagonalization. Xin Lu received, as Master 2 student, his lectures at ICFP in France during the [Numerical Physics course](http://www.lptms.universite-paris-saclay.fr/wiki-cours/index.php/ICFP_NumPhys_Paris).
+  - Guixin Liu for the discussion on the GPU implementation of our code.
 
 ---
 
@@ -29,6 +30,7 @@
   - **Fractional Chern Insulator / Fractional Anomalous Hall states**
 - Parallelized sparse matrix diagonalization (MPI-based)
 - Multiple Lanczos-type algorithms available: Trivial Lanczos, Partial Reorthogonalization, Partial Reorthogonalization with Cauchy Convergence criterion, Partial Reorthogonalization with Residual Value Monitorning
+- GPU accelaration
 
 ---
 
@@ -41,6 +43,7 @@ We recommend using the most recent Anaconda distribution.
 
 - **`mpi4py`**: for distributed computation
 - **`numba`**: no-python mode for fast local computation
+- **`cupy`**: GPU implementation of scientific computation
 
 * * *
 
@@ -61,7 +64,7 @@ EDHamPy/
 📊 Benchmark
 ------------
 
-### Example: FQHE  for electrons at  $\nu=1/3$  of  the  zeroth Landau level
+### Example: FQHE for electrons at $\nu=1/3$ of the zeroth Landau level
 
 ![image](./benchmark/Compare_spectra_FQHE_filling1-3_torus.jpg)
 
